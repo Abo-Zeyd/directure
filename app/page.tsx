@@ -1,4 +1,5 @@
 import {Moctasapat} from "./l_m_assessment/moctasapat";
+import ExportDocx from "./l_m_assessment/convertToWord";
 
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
         <div className="text-2xl font-bold text-center text-gray-800">
           {/* عنوان الصفحة هنا إن أحببت */}
         </div>
-        
+         {/* <ExportDocx /> */}
         <Moctasapat />
 
         <div className="text-sm text-gray-500">
