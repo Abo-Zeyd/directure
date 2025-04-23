@@ -98,6 +98,7 @@ function LMAssessment(datainf: any) {
   const handlePrint = useReactToPrint({
     contentRef: contentRef,
     documentTitle: `توزيع`,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     onPrintError: (errorLocation: any, error: { message: any }) => {
       alert(
         `❌خطأ في ${errorLocation}: ${error.message} حدث خطأ أثناء الطباعة. يرجى المحاولة مرة أخرى!`
@@ -346,7 +347,7 @@ const subjects = [
   "التربية البدنية",
   "التربية التكنولوجية",
 ];
-function ArabicForm({ skillText, setSkillText }) {
+function ArabicForm({ skillText, setSkillText }: { skillText: string; setSkillText: React.Dispatch<React.SetStateAction<string>> }) {
   const [wilaya, setWilaya] = useState("");
   const [school, setSchool] = useState("");
   const [selectedSubject, setSelectedSubject] = useState(subjects[1]);
