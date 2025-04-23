@@ -1,31 +1,31 @@
 "use client";
 import React from 'react';
-import { saveAs } from 'file-saver';
-import HtmlDocx from 'html-docx-ts';
+// import { saveAs } from 'file-saver';
+// import HtmlDocx from 'html-docx-ts';
 
-type ExportDocxProps = {
-  contentRef: React.RefObject<HTMLDivElement>;
-};
+// type ExportDocxProps = {
+//   contentRef: React.RefObject<HTMLDivElement>;
+// };
 
-const ExportDocx = ({ contentRef }: ExportDocxProps) => {
-  const generateDocx = () => {
-    const element = contentRef.current;
-    if (!element) return;
+const ExportDocx = (/* { contentRef }: ExportDocxProps */) => {
+  // const generateDocx = () => {
+  //   const element = contentRef.current;
+  //   if (!element) return;
 
-    const htmlContent = `
-      <html>
-        <head><meta charset="utf-8"></head>
-        <body>${element.innerHTML}</body>
-      </html>
-    `;
+  //   const htmlContent = `
+  //     <html>
+  //       <head><meta charset="utf-8"></head>
+  //       <body>${element.innerHTML}</body>
+  //     </html>
+  //   `;
 
-    const blob = HtmlDocx.asBlob(htmlContent);
-    saveAs(blob, 'document.docx');
-  };
+  //   const blob = HtmlDocx.asBlob(htmlContent);
+  //   saveAs(blob, 'document.docx');
+  // };
 
   return (
     <div className="text-black">
-      <button onClick={generateDocx}>تصدير كـ Word</button>
+      {/* <button onClick={generateDocx}>تصدير كـ Word</button> */}
     </div>
   );
 };
