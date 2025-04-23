@@ -1,8 +1,12 @@
 "use client";
-import { useState, useEffect } from "react";
+
+// Fixed import
+import Doc from "./doc";
+// Fixed import
+import LMAssessment from "./l_m_assessment";
 // import * as xlsx from "xlsx"; // Fixed import
-import {excelToJsonAllSheets} from "@/utils/excelToJsonAllSheets"; // Fixed import
-import LMAssessment from "./l_m_assessment"; // Fixed import
+import { excelToJsonAllSheets } from "@/utils/excelToJsonAllSheets";
+import { useState, useEffect } from "react";
 
 export function Moctasapat() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -31,34 +35,39 @@ export function Moctasapat() {
       reader.readAsArrayBuffer(selectedFile); // قراءة الملف كـ ArrayBuffer
     }
   }, [selectedFile]); // تنفيذ التأثير عند تغيير selectedFile
-if (jsonData) {
-  // console.log("jsonData", jsonData); // طباعة jsonData في وحدة التحكم
-}
+  if (jsonData) {
+    // console.log("jsonData", jsonData); // طباعة jsonData في وحدة التحكم
+  }
   return (
     <div style={{ padding: "20px" }}>
+      <div>
+         
+        <Doc />
+      </div>
       <div style={{ padding: "20px" }}>
-  <h1 className="mb-4 text-xl font-bold">اختر ملف Excel</h1>
+        <h1 className="mb-4 text-xl  text-black">
+          اختر ملف تقييم المكتسبات بصيغة Excel
+        </h1>
 
-  {/* زر تنسيقي */}
-  <label
-    htmlFor="excel-upload"
-    className="inline-block cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow"
-  >
-    اختر ملف
-  </label>
+        {/* زر تنسيقي */}
+        <label
+          htmlFor="excel-upload"
+          className="inline-block cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow"
+        >
+          اختر ملف
+        </label>
 
-  {/* input مخفي */}
-  <input
-    id="excel-upload"
-    type="file"
-    accept=".xlsx,.xls"
-    onChange={handleFileChange}
-    className="hidden"
-  />
-</div>
-
-
-      {jsonData && <LMAssessment jsonData={jsonData} />} {/* تمرير jsonData إلى Test */}
+        {/* input مخفي */}
+        <input
+          id="excel-upload"
+          type="file"
+          accept=".xlsx,.xls"
+          onChange={handleFileChange}
+          className="hidden"
+        />
+      </div>
+      {jsonData && <LMAssessment jsonData={jsonData} />}{" "}
+      {/* تمرير jsonData إلى Test */}
     </div>
   );
 }

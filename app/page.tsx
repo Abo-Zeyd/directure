@@ -1,5 +1,5 @@
 import {Moctasapat} from "./l_m_assessment/moctasapat";
-
+import ContactInfo from "./contactInfo";
 
 
 export default function Home() {
@@ -13,9 +13,12 @@ export default function Home() {
          {/* <ExportDocx /> */}
         <Moctasapat />
 
-        <div className="text-sm text-gray-500">
-          &copy; 2023 جميع الحقوق محفوظة
+        <div className="flex flex-col items-center text-xl text-gray-500">
+         <h1>برمجة: عز الدين عويسي</h1>
+         <ContactInfo />
+
         </div>
+        
 
       </div>
     </div>

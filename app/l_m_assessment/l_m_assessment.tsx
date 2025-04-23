@@ -136,7 +136,7 @@ function LMAssessment(datainf: any) {
       <div className="flex flex-row items-center justify-center mb-4 mr-3">
       <button
         onClick={() => handlePrint()}
-        className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+        className="bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer hover:bg-blue-700 transition duration-300 ease-in-out"
       >
         طباعة
       </button>
