@@ -44,7 +44,7 @@ export function Moctasapat() {
          
         <Doc />
       </div>
-      <div style={{ padding: "20px" }}>
+      <div className="flex flex-col items-center justify-center mt-4">
         <h1 className="mb-4 text-xl  text-black">
           اختر ملف تقييم المكتسبات بصيغة Excel
         </h1>
@@ -52,7 +52,7 @@ export function Moctasapat() {
         {/* زر تنسيقي */}
         <label
           htmlFor="excel-upload"
-          className="inline-block cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow"
+          className="  cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow"
         >
           اختر ملف
         </label>

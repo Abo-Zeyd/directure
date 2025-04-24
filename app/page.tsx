@@ -14,7 +14,7 @@ export default function Home() {
         <Moctasapat />
 
         <div className="flex flex-col items-center text-xl text-gray-500">
-         <h1>برمجة: عز الدين عويسي</h1>
+         <h1>من إنجاز: عز الدين عويسي</h1>
          <ContactInfo />
 
         </div>
