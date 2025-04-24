@@ -164,7 +164,7 @@ function LMAssessment(datainf: any) {
         {/* رأس الجدول */}
         <thead>
           <tr>
-            <th className="border-2 border-black p-2 w-fit rotate-[270deg]" rowSpan={3}>
+            <th className="border-2 border-black p-2 w-12 rotate-[270deg]" rowSpan={3}>
               الرقم
             </th>
             <th rowSpan={3} className="border-2 border-black p-2 w-1/12">
@@ -237,7 +237,7 @@ function LMAssessment(datainf: any) {
   
             return (
               <tr key={index} className="border-2 border-black">
-                <td className="border-2 border-black p-2">{index + 1}</td>
+                <td className="border border-black p-2 whitespace-nowrap text-center align-middle">{index + 1}</td>
                 <td className="border-2 border-black p-2">{item}</td>
   
                 {row.map((cell, cellIndex) => (
