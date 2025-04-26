@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import * as xlsx from "xlsx"; // Fixed import
 export function excelToJsonAllSheets(fileContent: ArrayBuffer) {
@@ -5,6 +6,7 @@ export function excelToJsonAllSheets(fileContent: ArrayBuffer) {
   const workbook = xlsx.read(fileContent, { type: "array" });
 
   // كائن JSON النهائي
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const jsonData: Record<string, any> = {};
 
   // الدوران عبر جميع الأوراق

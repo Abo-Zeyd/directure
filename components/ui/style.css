@@ -1,0 +1,43 @@
+.combStyle {
+  /* نخفي السهم الافتراضي كامل */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  
+  /* نحط السهم المخصص */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="%23000"/></svg>') 
+    no-repeat left 0.75rem center;
+  background-size: 10px 10px;
+  
+  padding-left: 2rem; /* مساحة للسهم */
+  padding-right: 1rem; /* عشان النص يجي مضبوط */
+  
+  background-color: inherit;
+  
+  /* اتجاه النص */
+  direction: rtl;
+
+  /* نلغي السهم الخاص بإنترنت إكسبلورر القديم */
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+
+
+.barBackground {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d8e0de+0,aebfbc+22,99afab+33,8ea6a2+50,829d98+67,4e5c5a+82,0e0e0e+100;Grey+3D */
+  background: linear-gradient(
+    to bottom,
+    rgba(216, 224, 222, 1) 0%,
+    rgba(174, 191, 188, 1) 22%,
+    rgba(153, 175, 171, 1) 33%,
+    rgba(142, 166, 162, 1) 50%,
+    rgba(130, 157, 152, 1) 67%,
+    rgba(78, 92, 90, 1) 82%,
+    rgba(14, 14, 14, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
