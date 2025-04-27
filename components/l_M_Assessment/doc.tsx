@@ -21,7 +21,7 @@ function Doc() {
 
       {showInf && (
       <div className="flex justify-center items-center mb-9 border-2 border-dashed border-gray-700 p-4 bg-gray-200 shadow-lg">
-      <div className="  p-8 w-full max-w-md text-start space-y-6">
+      <div className="  p-8   text-start space-y-6">
         <ul className="list-none space-y-4 text-[1.1rem] font-medium leading-relaxed text-gray-700">
           <li className="flex items-center gap-2">
             🛠 انقر على الزر: 
@@ -38,7 +38,16 @@ function Doc() {
             </select>
             الذي ستخرج له البطاقة
           </li>
-          <li>✍️ أكمل ملء <span className="font-bold text-blue-600">البيانات المطلوبة</span></li>
+          <li className="flex items-center gap-2">
+            📋 من القائمة : الشبكة التحليلية ... 
+            <select className=" px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              <option>اللغة العربية</option>
+             
+              {/* أضف الخيارات التي تريدها هنا */}
+            </select> 
+            حدد النشاط الوافق للميدان من القائمة المنسدلة
+          </li>
+          <li>✍️ أكمل ملء البيانات المطلوبة</li>
           <li className="flex items-center gap-2">🖨️ انقر على زر  <Button handleChange={() => {}} id="btn1">طباعة</Button></li>
         </ul>
       </div>
